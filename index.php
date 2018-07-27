@@ -144,8 +144,8 @@ body {
 			$nome = $_POST['nome'];
 			$email = $_POST['email'];
 
-			$usuario->setNome($nome);
-			$usuario->setEmail($email);
+			$usuario->setNome($nome);			
+			$usuario->setEmail($email);			
 
 			if($usuario->insert()){
 				echo "Inserido com sucesso!";
@@ -162,9 +162,9 @@ body {
 		$id = $_POST['id'];
 		$nome = $_POST['nome'];
 		$email = $_POST['email'];
-
-		$usuario->setNome($nome);
-		$usuario->setEmail($email);
+		
+		$usuario->setNome($nome);				
+		$usuario->setEmail($email);		
 
 		if($usuario->update($id)){
 
@@ -199,7 +199,7 @@ body {
 
 	<h1>Atualizar dados abaixo!</h1>
 
-	<form method="post" class="login-form"  action="">
+	<form method="POST" class="login-form"  action="">
 		<input type="text" name="nome" value="<?php echo $resultado->nome ?>" placeholder="nome:" />
 		<br>
 		<input type="text" name="email" value="<?php echo $resultado->email ?>" placeholder="E-mail:" />
@@ -214,7 +214,7 @@ body {
 	<br><hr/><br>
 
 
-	<form method="post" class="login-form" action="">		
+	<form method="POST" class="login-form" action="">		
 		<input type="text" name="nome" placeholder="nome:" />
 		<br>
 		<input type="text" name="email" placeholder="E-mail:" />
